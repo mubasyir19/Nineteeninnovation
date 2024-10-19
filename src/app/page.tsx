@@ -1,113 +1,285 @@
-import Image from "next/image";
+'use client';
+
+import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import ArrowRight from '../../public/icons/arrow-right.svg';
+import WhiteArrowRight from '../../public/icons/white-arrow-right.svg';
+import Ornament from '../../public/images/ornament.png';
+import CardProject from '@/components/organism/CardProject';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <section id='hero' className='h-screen lg:h-full w-full bg-[#0C111F]'>
+        <div className='bg-hero bg-cover md:bg-cover md:bg-center h-screen lg:h-full w-full px-6 lg:pb-24 lg:py-40 flex justify-center items-center'>
+          <div className='xl:w-3/4 mx-auto'>
+            <div className='py-2 px-3 bg-white bg-opacity-10 text-center w-fit mx-auto rounded-full'>
+              <p className='font-medium text-[10px] text-white'>NUMBER ONE DIGITAL CREATIVE AGENCY</p>
+            </div>
+            <div className='mt-2'>
+              <div className='text-center'>
+                <h1 className='text-4xl lg:text-6xl xl:text-7xl text-white font-bold'>
+                  <span className='bg-gradient-to-r from-[#38C682] to-[#00796D] bg-clip-text text-transparent font-extrabold'>
+                    Smart Choices
+                  </span>{' '}
+                  <br />
+                  For Your Business Growth
+                </h1>
+                <p className='text-[#B6B8BC] text-sm lg:text-xl lg:w-3/4 text-center mx-auto font-medium mt-4 px-2'>
+                  We&apos;re a team of experienced designers, developers, and marketers, passionate about delivering
+                  exceptional digital solutions.
+                </p>
+              </div>
+              <div className='mt-10'>
+                <button className='mx-auto flex justify-center gap-x-3 bg-gradient-to-r from-[#38C682] to-[#00796D] py-4 px-6 rounded-full w-fit text-white font-medium'>
+                  <span className='my-auto'>Contact Us</span>
+                  <Image src={WhiteArrowRight} height={15} width={15} alt='white arrow right' className='my-auto' />
+                </button>
+              </div>
+            </div>
+            <div className='mt-11 lg:hidden'>
+              <div className='relative overflow-hidden w-fit mx-auto'>
+                <Image src='/images/shape-sm.png' height={347} width={327} alt='shape' className='mx-auto' />
+                <Image
+                  src='/images/circle-lg.png'
+                  height={364}
+                  width={364}
+                  alt='shape'
+                  className='absolute -top-28 -left-24'
+                />
+                <div className='absolute top-4 inset-x-0'>
+                  <p className='text-center text-white text-lg font-semibold'>
+                    Benefits of <br /> improving your business
+                  </p>
+                  <Swiper
+                    autoplay={{
+                      delay: 2500,
+                      disableOnInteraction: false,
+                    }}
+                    modules={[Autoplay, Pagination, Navigation]}
+                    className='mySwiper mt-10'
+                  >
+                    <SwiperSlide>
+                      <Image src='/images/expand.png' height={108} width={108} alt='special' className='mx-auto' />
+                      <p className='text-white text-center mt-2 font-medium text-2xl'>Expanding the Market</p>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <Image src='/images/cost.png' height={108} width={108} alt='special' className='mx-auto' />
+                      <p className='text-white text-center mt-2 font-medium text-2xl'>Cost Effective</p>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <Image
+                        src='/images/professional.png'
+                        height={108}
+                        width={108}
+                        alt='special'
+                        className='mx-auto'
+                      />
+                      <p className='text-white text-center mt-2 font-medium text-2xl'>More Professional</p>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <Image src='/images/attract.png' height={108} width={108} alt='special' className='mx-auto' />
+                      <p className='text-white text-center mt-2 font-medium text-2xl'>Attract Client</p>
+                    </SwiperSlide>
+                  </Swiper>
+                </div>
+              </div>
+            </div>
+            <div className='mt-20 hidden lg:block'>
+              <div className='relative overflow-hidden h-fit w-fit mx-auto'>
+                <Image src='/images/shape-lg.png' height={334} width={1280} alt='shape' className='mx-auto h-full' />
+                <Image
+                  src='/images/circle-lg.png'
+                  height={500}
+                  width={500}
+                  alt='shape'
+                  className='absolute -top-60 -left-32'
+                />
+                <Image
+                  src='/images/circle-sm.png'
+                  height={364}
+                  width={364}
+                  alt='shape'
+                  className='absolute -bottom-36 -right-24'
+                />
+                <div className='absolute top-6 inset-x-0'>
+                  <p className='text-center text-white text-2xl xl:text-[32px] font-semibold'>
+                    Benefits of improving your business
+                  </p>
+                  <div className='grid grid-cols-4 mt-8 xl:mt-16'>
+                    <div>
+                      <Image src='/images/expand.png' height={108} width={108} alt='special' className='mx-auto' />
+                      <p className='text-white text-center mt-2 font-medium lg:text-xl xl:text-2xl'>
+                        Expanding the Market
+                      </p>
+                    </div>
+                    <div>
+                      <Image src='/images/cost.png' height={108} width={108} alt='special' className='mx-auto' />
+                      <p className='text-white text-center mt-2 font-medium lg:text-xl xl:text-2xl'>Cost Effective</p>
+                    </div>
+                    <div>
+                      <Image
+                        src='/images/professional.png'
+                        height={108}
+                        width={108}
+                        alt='special'
+                        className='mx-auto'
+                      />
+                      <p className='text-white text-center mt-2 font-medium lg:text-xl xl:text-2xl'>
+                        More Professional
+                      </p>
+                    </div>
+                    <div>
+                      <Image src='/images/attract.png' height={108} width={108} alt='special' className='mx-auto' />
+                      <p className='text-white text-center mt-2 font-medium lg:text-xl xl:text-2xl'>Attract Client</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
+      </section>
+      <section className='px-6 md:px-10 lg:px-20 py-14'>
+        <div className='w-full xl:w-3/4 mx-auto'>
+          <h1 className='text-[#0C111F] text-4xl xl:text-5xl font-bold text-center'>
+            The Services We Offer{' '}
+            <span className='bg-gradient-to-r from-[#38C682] to-[#00796D] bg-clip-text text-transparent font-extrabold'>
+              For You
             </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          </h1>
+          <div className='mt-8 xl:mt-16'>
+            <div className='service bg-[#F8F8F8] p-6 my-4 xl:p-14 rounded-xl w-full h-fit flex justify-between'>
+              <div className='flex gap-x-5 items-center'>
+                <h3 className='my-auto text-xl xl:text-2xl font-bold text-[#3D414C] w-8'>01</h3>
+                <h3 className='my-auto text-xl xl:text-2xl font-bold text-[#3D414C]'>UI/UX Design</h3>
+              </div>
+              <Image src={ArrowRight} height={15} width={15} alt='arrow' />
+            </div>
+            <div className='service bg-[#F8F8F8] p-6 my-4 xl:p-14 rounded-xl flex justify-between'>
+              <div className='flex gap-x-5 items-center'>
+                <h3 className='my-auto text-xl xl:text-2xl font-bold text-[#3D414C] w-8'>02</h3>
+                <h3 className='my-auto text-xl xl:text-2xl font-bold text-[#3D414C]'>Digital Marketing</h3>
+              </div>
+              <Image src={ArrowRight} height={15} width={15} alt='arrow' />
+            </div>
+            <div className='service bg-[#F8F8F8] p-6 my-4 xl:p-14 rounded-xl flex justify-between'>
+              <div className='flex gap-x-5 items-center'>
+                <h3 className='my-auto text-xl xl:text-2xl font-bold text-[#3D414C] w-8'>03</h3>
+                <h3 className='my-auto text-xl xl:text-2xl font-bold text-[#3D414C]'>Development</h3>
+              </div>
+              <Image src={ArrowRight} height={15} width={15} alt='arrow' />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='relative overflow-hidden bg-gradient-opacity px-6 py-14 md:px-10 lg:py-20'>
+        <div className='w-full xl:w-3/4 mx-auto'>
+          <h3 className='text-2xl lg:text-3xl xl:text-5xl font-medium text-[#0C111F]'>
+            We are passionate about helping businesses grow and succeed in the digital age. We take pride in our work
+            and strive to exceed your expectations every time.
+          </h3>
+          <div className='mt-8 lg:mt-16 bg-gradient-green rounded-3xl grid grid-cols-1 gap-y-6 p-6 lg:p-8 lg:grid-cols-4'>
+            <div className='text-center'>
+              <h2 className='text-5xl xl:text-6xl font-bold text-white'>10 +</h2>
+              <p className='text-base xl:text-2xl text-[#F3F3F3]'>Years of Experiences</p>
+            </div>
+            <div className='text-center'>
+              <h2 className='text-5xl xl:text-6xl font-bold text-white'>666 +</h2>
+              <p className='text-base xl:text-2xl text-[#F3F3F3]'>Project Completed</p>
+            </div>
+            <div className='text-center'>
+              <h2 className='text-5xl xl:text-6xl font-bold text-white'>555 +</h2>
+              <p className='text-base xl:text-2xl text-[#F3F3F3]'>Satisfied Client</p>
+            </div>
+            <div className='text-center'>
+              <h2 className='text-5xl xl:text-6xl font-bold text-white'>15 +</h2>
+              <p className='text-base xl:text-2xl text-[#F3F3F3]'>Award Achieved</p>
+            </div>
+          </div>
+          <div className='absolute top-2 -left-6 lg:top-10 lg:left-10 h-[144px] w-[144px] bg-gradient-opacity rounded-full'></div>
+          <Image
+            src={Ornament}
+            height={474}
+            width={1019}
+            alt='ornmnt'
+            className='absolute h-full w-full top-24 -right-52 lg:top-20 lg:-right-36'
+          />
+        </div>
+      </section>
+      <section className='bg-[#0C111F] w-full h-full'>
+        <div className='bg-grid h-full w-full bg-cover bg-center'>
+          <div className='w-full mx-auto px-6 md:px-10 lg:px-20 py-14'>
+            <div className='text-center'>
+              <h1 className='text-4xl text-white font-bold'>
+                Our Project Have Been{' '}
+                <span className='bg-gradient-to-r from-[#38C682] to-[#00796D] bg-clip-text text-transparent font-bold'>
+                  Done
+                </span>
+              </h1>
+              <p className='text-[#B6B8BC] mt-4'>
+                Take a look at some of our recent projects and see how we&apos;ve helped other businesses elevate their
+                brand and drive business growth.
+              </p>
+            </div>
+            <div className='mt-8'>
+              <div className='bg-white rounded-full w-fit mx-auto p-2 flex'>
+                <button className='py-2 px-4 rounded-3xl text-white bg-gradient-to-r from-[#38C682] to-[#00796D] transition-all duration-300'>
+                  <span className='md:hidden'>UI/UX</span>
+                  <span className='hidden md:block'>UI/UX Design</span>
+                </button>
+                <button className='py-2 px-4 rounded-3xl text-black transition-all duration-300'>
+                  <span className='md:hidden'>Digital</span>
+                  <span className='hidden md:block'>Digital Marketing</span>
+                </button>
+                <button className='py-2 px-4 rounded-3xl text-black transition-all duration-300'>
+                  <span className='md:hidden'>SMM</span>
+                  <span className='hidden md:block'>Socmed Management</span>
+                </button>
+                <button className='py-2 px-4 rounded-3xl text-black transition-all duration-300'>
+                  <span className='md:hidden'>Dev</span>
+                  <span className='hidden md:block'>Development</span>
+                </button>
+              </div>
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16'>
+                <CardProject
+                  sourceImg='/images/project1.png'
+                  title='Title'
+                  description='We are designed to help your business thrive in the online world.'
+                />
+                <CardProject
+                  sourceImg='/images/project2.png'
+                  title='Title'
+                  description='We are designed to help your business thrive in the online world.'
+                />
+                <CardProject
+                  sourceImg='/images/project1.png'
+                  title='Title'
+                  description='We are designed to help your business thrive in the online world.'
+                />
+                <CardProject
+                  sourceImg='/images/project2.png'
+                  title='Title'
+                  description='We are designed to help your business thrive in the online world.'
+                />
+                <CardProject
+                  sourceImg='/images/project1.png'
+                  title='Title'
+                  description='We are designed to help your business thrive in the online world.'
+                />
+                <CardProject
+                  sourceImg='/images/project2.png'
+                  title='Title'
+                  description='We are designed to help your business thrive in the online world.'
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
