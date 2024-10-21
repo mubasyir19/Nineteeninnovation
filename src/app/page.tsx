@@ -248,31 +248,37 @@ export default function Home() {
                 <CardProject
                   sourceImg='/images/project1.png'
                   title='Title'
+                  label='UI / UX'
                   description='We are designed to help your business thrive in the online world.'
                 />
                 <CardProject
                   sourceImg='/images/project2.png'
                   title='Title'
+                  label='Digital Marketing'
                   description='We are designed to help your business thrive in the online world.'
                 />
                 <CardProject
                   sourceImg='/images/project1.png'
                   title='Title'
+                  label='Socmed Management'
                   description='We are designed to help your business thrive in the online world.'
                 />
                 <CardProject
                   sourceImg='/images/project2.png'
                   title='Title'
+                  label='Website'
                   description='We are designed to help your business thrive in the online world.'
                 />
                 <CardProject
                   sourceImg='/images/project1.png'
                   title='Title'
+                  label='Mobile App'
                   description='We are designed to help your business thrive in the online world.'
                 />
                 <CardProject
                   sourceImg='/images/project2.png'
                   title='Title'
+                  label='Web App'
                   description='We are designed to help your business thrive in the online world.'
                 />
               </div>

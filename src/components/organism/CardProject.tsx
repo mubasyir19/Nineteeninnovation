@@ -1,14 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import Badge from '../atoms/Badge';
 
 interface CardProjectProps {
   sourceImg: string;
   title: string;
+  label: string;
   description: string;
 }
 
-export default function CardProject({ sourceImg, title, description }: CardProjectProps) {
+export default function CardProject({ sourceImg, title, label, description }: CardProjectProps) {
   const [openProject, setOpenProject] = useState(false);
 
   const handleOpen = () => {
@@ -39,6 +41,7 @@ export default function CardProject({ sourceImg, title, description }: CardProje
       </div>
       <div className='mt-4'>
         <p className='text-lg text-white font-bold'>{title}</p>
+        <Badge label={label} />
         <p className='text-[#B6B8BC] text-base mt-2'>{description}</p>
       </div>
     </div>
