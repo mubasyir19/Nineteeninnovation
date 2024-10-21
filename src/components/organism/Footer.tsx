@@ -38,16 +38,13 @@ export default function Footer() {
               <p className='text-white font-bold'>Menu</p>
               <ul className='mt-4 flex flex-col gap-y-3 text-[#B6B8BC]'>
                 <li>
-                  <Link href='#'>Home</Link>
-                </li>
-                <li>
                   <Link href='#'>Service</Link>
                 </li>
                 <li>
-                  <Link href='#'>About Us</Link>
+                  <Link href='#'>Projects</Link>
                 </li>
                 <li>
-                  <Link href='#'>Projects</Link>
+                  <Link href='#'>About Us</Link>
                 </li>
                 <li>
                   <Link href='#'>Contact</Link>
