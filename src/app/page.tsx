@@ -5,10 +5,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import ArrowRight from '../../public/icons/arrow-right.svg';
 import WhiteArrowRight from '../../public/icons/white-arrow-right.svg';
 import Ornament from '../../public/images/ornament.png';
-import CardProject from '@/components/organism/CardProject';
+import CardProject from '@/components/molecules/CardProject';
+import ServiceCard from '@/components/molecules/ServiceCard';
 
 export default function Home() {
   return (
@@ -152,27 +152,13 @@ export default function Home() {
             </span>
           </h1>
           <div className='mt-8 xl:mt-16'>
-            <div className='service bg-[#F8F8F8] p-6 my-4 xl:p-14 rounded-xl w-full h-fit flex justify-between'>
-              <div className='flex gap-x-5 items-center'>
-                <h3 className='my-auto text-xl xl:text-2xl font-bold text-[#3D414C] w-8'>01</h3>
-                <h3 className='my-auto text-xl xl:text-2xl font-bold text-[#3D414C]'>UI/UX Design</h3>
-              </div>
-              <Image src={ArrowRight} height={15} width={15} alt='arrow' />
-            </div>
-            <div className='service bg-[#F8F8F8] p-6 my-4 xl:p-14 rounded-xl flex justify-between'>
-              <div className='flex gap-x-5 items-center'>
-                <h3 className='my-auto text-xl xl:text-2xl font-bold text-[#3D414C] w-8'>02</h3>
-                <h3 className='my-auto text-xl xl:text-2xl font-bold text-[#3D414C]'>Digital Marketing</h3>
-              </div>
-              <Image src={ArrowRight} height={15} width={15} alt='arrow' />
-            </div>
-            <div className='service bg-[#F8F8F8] p-6 my-4 xl:p-14 rounded-xl flex justify-between'>
-              <div className='flex gap-x-5 items-center'>
-                <h3 className='my-auto text-xl xl:text-2xl font-bold text-[#3D414C] w-8'>03</h3>
-                <h3 className='my-auto text-xl xl:text-2xl font-bold text-[#3D414C]'>Development</h3>
-              </div>
-              <Image src={ArrowRight} height={15} width={15} alt='arrow' />
-            </div>
+            <ServiceCard
+              number='01'
+              title='UI / UX Design'
+              description='UI UIX kami menyediakan design yang detail yang bisa membuat penggunanya tertarik dan nyaman ketika menggunakan sistem anda.'
+            />
+            <ServiceCard number='02' title='System Development' description='Ini adalah deskripsi' />
+            <ServiceCard number='03' title='Digital Marketing' description='Ini adalah deskripsi' />
           </div>
         </div>
       </section>
