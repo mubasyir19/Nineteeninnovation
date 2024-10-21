@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface BadgeProps {
   label: string;
@@ -6,8 +6,8 @@ interface BadgeProps {
 
 export default function Badge({ label }: BadgeProps) {
   return (
-    <div className='px-2 py-1 mt-2 bg-white bg-opacity-10 w-fit rounded-full'>
-      <p className='text-xs text-gray-500'>{label}</p>
+    <div className="mt-2 w-fit rounded-full bg-white bg-opacity-10 px-2 py-1">
+      <p className="text-xs text-gray-500">{label}</p>
     </div>
   );
 }
