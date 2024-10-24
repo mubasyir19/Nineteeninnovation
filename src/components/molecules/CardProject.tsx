@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Badge from "../atoms/Badge";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface CardProjectProps {
   sourceImg: string;
@@ -21,6 +25,10 @@ export default function CardProject({
   const handleOpen = () => {
     setOpenProject(!openProject);
   };
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <div className="h-fit w-full rounded-3xl bg-[#181D2A] p-3 md:p-4">
@@ -44,7 +52,7 @@ export default function CardProject({
                 height={218}
                 width={218}
                 alt="link-project"
-                className=""
+                data-aos="fade-up"
               />
             </button>
           </div>
