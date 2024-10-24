@@ -35,7 +35,7 @@ export default function CardProject({
         />
         {openProject && (
           <div
-            className="absolute inset-0 flex h-full w-full items-center justify-center bg-black bg-opacity-50 transition-all duration-300"
+            className="absolute inset-0 z-0 flex h-full w-full items-center justify-center bg-black bg-opacity-50 transition-all duration-300"
             onClick={handleOpen}
           >
             <button className="">

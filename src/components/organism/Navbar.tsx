@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <>
-      <nav className="fixed flex w-full justify-between p-6 lg:hidden">
+      <nav className="fixed z-50 flex w-full justify-between p-6 lg:hidden">
         <h1 className="my-auto text-white">
           <span className="bg-gradient-to-r from-[#38C682] to-[#00796D] bg-clip-text font-extrabold text-transparent">
             Nineteen
@@ -22,7 +22,7 @@ export default function Navbar() {
           className="my-auto"
         />
       </nav>
-      <nav className="fixed hidden w-full justify-between px-20 py-4 lg:flex">
+      <nav className="fixed z-50 hidden w-full justify-between px-20 py-4 lg:flex">
         <h1 className="my-auto text-white">
           <span className="bg-gradient-to-r from-[#38C682] to-[#00796D] bg-clip-text font-extrabold text-transparent">
             Nineteen

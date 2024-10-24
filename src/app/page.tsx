@@ -312,16 +312,12 @@ export default function Home() {
                   <span className="hidden md:block">UI/UX Design</span>
                 </button>
                 <button className="rounded-3xl px-4 py-2 text-black transition-all duration-300">
-                  <span className="md:hidden">Digital</span>
-                  <span className="hidden md:block">Digital Marketing</span>
-                </button>
-                <button className="rounded-3xl px-4 py-2 text-black transition-all duration-300">
-                  <span className="md:hidden">SMM</span>
-                  <span className="hidden md:block">Socmed Management</span>
-                </button>
-                <button className="rounded-3xl px-4 py-2 text-black transition-all duration-300">
                   <span className="md:hidden">Dev</span>
                   <span className="hidden md:block">Development</span>
+                </button>
+                <button className="rounded-3xl px-4 py-2 text-black transition-all duration-300">
+                  <span className="md:hidden">Digital</span>
+                  <span className="hidden md:block">Digital Marketing</span>
                 </button>
               </div>
               <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
