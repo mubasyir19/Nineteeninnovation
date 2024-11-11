@@ -31,7 +31,13 @@ export default function ServiceCard({
           </h3>
         </div>
         <button onClick={toogleOpen}>
-          <Image src={ArrowRight} height={15} width={15} alt="arrow" />
+          <Image
+            src={ArrowRight}
+            height={15}
+            width={15}
+            alt="arrow"
+            className={`transform transition-transform duration-300 ${isOpen ? "rotate-90" : "rotate-0"}`}
+          />
         </button>
       </div>
       {isOpen && (
