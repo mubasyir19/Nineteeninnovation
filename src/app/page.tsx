@@ -223,17 +223,17 @@ export default function Home() {
             <ServiceCard
               number="01"
               title="UI / UX Design"
-              description="UI UIX kami menyediakan design yang detail yang bisa membuat penggunanya tertarik dan nyaman ketika menggunakan sistem anda."
+              description="Our meticulously crafted UI/UX designs offer immersive experiences, ensuring users find your system intuitive and pleasant to interact with."
             />
             <ServiceCard
               number="02"
               title="System Development"
-              description="Ini adalah deskripsi"
+              description="Enhance Your Business Efficiency. A tailored system can automate your business operations, improve productivity, and facilitate data-driven decision-making."
             />
             <ServiceCard
               number="03"
               title="Digital Marketing"
-              description="Ini adalah deskripsi"
+              description="Acquire a larger customer base and enhance revenue. By implementing a tailored digital marketing strategy, you can elevate your brand's visibility, captivate a wider audience, and stimulate sales."
             />
           </div>
         </div>

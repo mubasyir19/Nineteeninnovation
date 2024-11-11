@@ -40,9 +40,7 @@ export default function ServiceCard({
           />
         </button>
       </div>
-      {isOpen && (
-        <p className="mt-5 transition-all duration-200">{description}</p>
-      )}
+      {isOpen && <p className="mt-5">{description}</p>}
     </div>
   );
 }
